@@ -68,17 +68,24 @@ public class File{
                             int nominalKategori = scanner.nextInt();
                             storage.get(pilihKategori).add(nominalKategori);
                             System.out.println("Berhasil menambahkan nominal sebesar Rp " + nominalKategori + " ke Kategori '" + pilihKategori + "'.");
+                            break;
                         }
 
                     // Tampilkan Laporan (Total per kategori)
                     case 3:
                         System.out.println("-- LAPORAN KEUANGAN --");
+                        
                         for (String namaMasing2Kategori : storage.keySet()) {
+                            int total = 0;
+                            System.out.println("Kategori : " + namaMasing2Kategori);
                             for (Integer nominalKategori : storage.get(namaMasing2Kategori)){
-                                System.out.println("Kategori : " + namaMasing2Kategori);
+                                
+                                
                                 System.out.println("- " + nominalKategori);
-                                // System.out.println("Total makan: Rp " + );
+                                total += nominalKategori;
+                                
                             }
+                            System.out.println("Total makan: Rp " + total);
                         }
 
                         
