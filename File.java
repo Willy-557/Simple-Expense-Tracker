@@ -48,7 +48,28 @@ public class File{
                             break;
                         }
                         
-                
+                    case 2:
+                        System.out.println("-- Catat Pengeluaran --");
+                        for (String nameKategori : storage.keySet()) {
+                            System.out.println("- " + nameKategori);
+                        }
+                        System.out.print("Pilih kategori yang ingin di-tambahkan nominal: ");
+                        String pilihKategori = scanner.nextLine();
+                        
+                        if (!storage.containsKey(pilihKategori)) {
+                            System.out.println("Kategori '" + pilihKategori + "' tidak ada di menu, silahkan buat terlebih dahulu!");
+                            continue;
+                        }
+                        else {
+                            System.out.print("Tuliskan nominalnya (Rp): ");
+                            int nominalKategori = scanner.nextInt();
+                            storage.get(pilihKategori).add(nominalKategori);
+                            System.out.println("Berhasil menambahkan nominal sebesar Rp " + nominalKategori + " ke Kategori '" + pilihKategori + "'.");
+                        }
+
+                        
+
+
                     default:
                         break;
                 }
