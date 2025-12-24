@@ -12,6 +12,7 @@ public class File{
         HashMap<String, ArrayList<Integer>> storage = new HashMap <>();
         
         while (true) {
+            
             System.out.println("\n=== DOMPET PINTAR ===");
             System.out.println("1. Tambah Kategori Baru");
             System.out.println("2. Catat pengeluaran");
@@ -43,6 +44,7 @@ public class File{
                             System.out.println("\nNama kategori '" + namaKategori + "' sudah ada!, tolong pilih nama yang lain!");
                             break;
                         }
+
                         else {
                             ArrayList<Integer> penyimpananPengeluaran = new ArrayList<>();
                             storage.put(namaKategori, penyimpananPengeluaran);
@@ -54,9 +56,11 @@ public class File{
                     case 2:
                         System.out.println("\n-- Catat Pengeluaran --");
                         System.out.println("\nJenis kategori: ");
+
                         for (String nameKategori : storage.keySet()) {
                             System.out.println("- " + nameKategori);
                         }
+
                         System.out.print("\nPilih kategori yang ingin di-tambahkan nominal: ");
                         String pilihKategori = scanner.nextLine();
                         
@@ -77,6 +81,7 @@ public class File{
                         System.out.println("\n-- LAPORAN KEUANGAN --");
                         
                         for (String namaMasing2Kategori : storage.keySet()) {
+
                             int total = 0;
                             System.out.println("\nKategori : " + namaMasing2Kategori);
                             for (Integer nominalKategori : storage.get(namaMasing2Kategori)){
