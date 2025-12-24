@@ -1,4 +1,5 @@
 // start 19:36
+// end 20:21
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,13 +40,13 @@ public class File{
                         String namaKategori = scanner.nextLine();
 
                         if (storage.containsKey(namaKategori)) {
-                            System.out.println("Nama kategori '" + namaKategori + "' sudah ada!, tolong pilih nama yang lain!");
+                            System.out.println("\nNama kategori '" + namaKategori + "' sudah ada!, tolong pilih nama yang lain!");
                             break;
                         }
                         else {
                             ArrayList<Integer> penyimpananPengeluaran = new ArrayList<>();
                             storage.put(namaKategori, penyimpananPengeluaran);
-                            System.out.println("Kategori '" + namaKategori + "' berhasil di-tambahkan!");
+                            System.out.println("\nKategori '" + namaKategori + "' berhasil di-tambahkan!");
                             System.out.println(storage);
                             break;
                         }
@@ -53,27 +54,28 @@ public class File{
                     //  Catat pengeluaran
                     case 2:
                         System.out.println("-- Catat Pengeluaran --");
+                        System.out.println("\nJenis kategori: ");
                         for (String nameKategori : storage.keySet()) {
                             System.out.println("- " + nameKategori);
                         }
-                        System.out.print("Pilih kategori yang ingin di-tambahkan nominal: ");
+                        System.out.print("\nPilih kategori yang ingin di-tambahkan nominal: ");
                         String pilihKategori = scanner.nextLine();
                         
                         if (!storage.containsKey(pilihKategori)) {
-                            System.out.println("Kategori '" + pilihKategori + "' tidak ada di menu, silahkan buat terlebih dahulu!");
+                            System.out.println("\nKategori '" + pilihKategori + "' tidak ada di menu, silahkan buat terlebih dahulu!");
                             continue;
                         }
                         else {
-                            System.out.print("Tuliskan nominalnya (Rp): ");
+                            System.out.print("\nTuliskan nominalnya (Rp): ");
                             int nominalKategori = scanner.nextInt();
                             storage.get(pilihKategori).add(nominalKategori);
-                            System.out.println("Berhasil menambahkan nominal sebesar Rp " + nominalKategori + " ke Kategori '" + pilihKategori + "'.");
+                            System.out.println("\nBerhasil menambahkan nominal sebesar Rp " + nominalKategori + " ke Kategori '" + pilihKategori + "'.");
                             break;
                         }
 
                     // Tampilkan Laporan (Total per kategori)
                     case 3:
-                        System.out.println("-- LAPORAN KEUANGAN --");
+                        System.out.println("-- LAPORAN KEUANGAN --\n");
                         
                         for (String namaMasing2Kategori : storage.keySet()) {
                             int total = 0;
