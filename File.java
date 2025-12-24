@@ -72,6 +72,14 @@ public class File{
 
                     // Tampilkan Laporan (Total per kategori)
                     case 3:
+                        System.out.println("-- LAPORAN KEUANGAN --");
+                        for (String namaMasing2Kategori : storage.keySet()) {
+                            for (Integer nominalKategori : storage.get(namaMasing2Kategori)){
+                                System.out.println("Kategori : " + namaMasing2Kategori);
+                                System.out.println("- " + nominalKategori);
+                                // System.out.println("Total makan: Rp " + );
+                            }
+                        }
 
                         
 
