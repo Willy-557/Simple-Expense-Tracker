@@ -77,22 +77,13 @@ public class File{
                         
                         for (String namaMasing2Kategori : storage.keySet()) {
                             int total = 0;
-                            System.out.println("Kategori : " + namaMasing2Kategori);
+                            System.out.println("\nKategori : " + namaMasing2Kategori);
                             for (Integer nominalKategori : storage.get(namaMasing2Kategori)){
-                                
-                                
                                 System.out.println("- " + nominalKategori);
-                                total += nominalKategori;
-                                
+                                total += nominalKategori;   
                             }
                             System.out.println("Total makan: Rp " + total);
                         }
-
-                        
-
-
-                    default:
-                        break;
                 }
             }
         }
