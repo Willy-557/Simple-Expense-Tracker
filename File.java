@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-
 public class File{
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
@@ -79,11 +77,11 @@ public class File{
                     // Tampilkan Laporan (Total per kategori)
                     case 3:
                         System.out.println("\n-- LAPORAN KEUANGAN --");
-                        
+                    
                         for (String namaMasing2Kategori : storage.keySet()) {
-
                             int total = 0;
                             System.out.println("\nKategori : " + namaMasing2Kategori);
+
                             for (Integer nominalKategori : storage.get(namaMasing2Kategori)){
                                 System.out.println("- " + nominalKategori);
                                 total += nominalKategori;   
