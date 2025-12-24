@@ -31,6 +31,8 @@ public class File{
             }
             else {
                 switch (opsi) {
+
+                    // Tambah Kategori Baru
                     case 1:
                         System.out.println("-- Tambah Kategori --");
                         System.out.print("Nama kategori: ");
@@ -47,7 +49,8 @@ public class File{
                             System.out.println(storage);
                             break;
                         }
-                        
+
+                    //  Catat pengeluaran
                     case 2:
                         System.out.println("-- Catat Pengeluaran --");
                         for (String nameKategori : storage.keySet()) {
@@ -66,6 +69,9 @@ public class File{
                             storage.get(pilihKategori).add(nominalKategori);
                             System.out.println("Berhasil menambahkan nominal sebesar Rp " + nominalKategori + " ke Kategori '" + pilihKategori + "'.");
                         }
+
+                    // Tampilkan Laporan (Total per kategori)
+                    case 3:
 
                         
 
