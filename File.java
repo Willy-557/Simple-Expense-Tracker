@@ -12,7 +12,7 @@ public class File{
         HashMap<String, ArrayList<Integer>> storage = new HashMap <>();
         
         while (true) {
-            System.out.println("=== DOMPET PINTAR ===");
+            System.out.println("\n=== DOMPET PINTAR ===");
             System.out.println("1. Tambah Kategori Baru");
             System.out.println("2. Catat pengeluaran");
             System.out.println("3. Tampilkan Laporan (Total per kategori)");
@@ -23,11 +23,11 @@ public class File{
             scanner.nextLine();
 
             if (opsi == 4) {
-                System.out.println("Terimakasih!");
+                System.out.println("\nTerimakasih!");
                 break;
             }
             else if (opsi > 4 || opsi < 1) {
-                System.out.println("Invalid input!");
+                System.out.println("\nInvalid input!");
                 continue;
             }
             else {
@@ -35,7 +35,7 @@ public class File{
 
                     // Tambah Kategori Baru
                     case 1:
-                        System.out.println("-- Tambah Kategori --");
+                        System.out.println("\n- Tambah Kategori --");
                         System.out.print("Nama kategori: ");
                         String namaKategori = scanner.nextLine();
 
@@ -47,13 +47,12 @@ public class File{
                             ArrayList<Integer> penyimpananPengeluaran = new ArrayList<>();
                             storage.put(namaKategori, penyimpananPengeluaran);
                             System.out.println("\nKategori '" + namaKategori + "' berhasil di-tambahkan!");
-                            System.out.println(storage);
                             break;
                         }
 
                     //  Catat pengeluaran
                     case 2:
-                        System.out.println("-- Catat Pengeluaran --");
+                        System.out.println("\n-- Catat Pengeluaran --");
                         System.out.println("\nJenis kategori: ");
                         for (String nameKategori : storage.keySet()) {
                             System.out.println("- " + nameKategori);
@@ -75,7 +74,7 @@ public class File{
 
                     // Tampilkan Laporan (Total per kategori)
                     case 3:
-                        System.out.println("-- LAPORAN KEUANGAN --\n");
+                        System.out.println("\n-- LAPORAN KEUANGAN --");
                         
                         for (String namaMasing2Kategori : storage.keySet()) {
                             int total = 0;
