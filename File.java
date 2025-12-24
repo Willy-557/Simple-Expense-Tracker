@@ -8,8 +8,8 @@ import java.util.HashMap;
 public class File{
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
-        HashMap<String, ArrayList> storage = new HashMap<>();
-
+        HashMap<String, ArrayList<Integer>> storage = new HashMap <>();
+        
         while (true) {
             System.out.println("=== DOMPET PINTAR ===");
             System.out.println("1. Tambah Kategori Baru");
@@ -30,7 +30,28 @@ public class File{
                 continue;
             }
             else {
+                switch (opsi) {
+                    case 1:
+                        System.out.println("-- Tambah Kategori --");
+                        System.out.print("Nama kategori: ");
+                        String namaKategori = scanner.nextLine();
+
+                        if (storage.containsKey(namaKategori)) {
+                            System.out.println("Nama kategori '" + namaKategori + "' sudah ada!, tolong pilih nama yang lain!");
+                            break;
+                        }
+                        else {
+                            ArrayList<Integer> penyimpananPengeluaran = new ArrayList<>();
+                            storage.put(namaKategori, penyimpananPengeluaran);
+                            System.out.println("Kategori '" + namaKategori + "' berhasil di-tambahkan!");
+                            System.out.println(storage);
+                            break;
+                        }
+                        
                 
+                    default:
+                        break;
+                }
             }
         }
     }
