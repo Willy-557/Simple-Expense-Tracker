@@ -12,7 +12,7 @@ public class File{
         HashMap<String, ArrayList<Integer>> storage = new HashMap <>();
         
         while (true) {
-            
+
             System.out.println("\n=== DOMPET PINTAR ===");
             System.out.println("1. Tambah Kategori Baru");
             System.out.println("2. Catat pengeluaran");
@@ -88,7 +88,7 @@ public class File{
                                 System.out.println("- " + nominalKategori);
                                 total += nominalKategori;   
                             }
-                            System.out.println("Total makan: Rp " + total);
+                            System.out.println("Total " + namaMasing2Kategori +": Rp " + total);
                         }
                 }
             }
